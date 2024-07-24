@@ -1,4 +1,6 @@
 my_string = input()     # Я учусь в Urban University
+len(my_string)
+print(len(my_string))
 print(
     my_string.upper()
 )
