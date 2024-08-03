@@ -17,7 +17,7 @@ for i in numbers:
     if  i < number:
         for j in numbers:
             if  j < number:
-                if i + j == number and j >= i:
+                if i + j == number and j != i and j >= i:
                     combs.append((i, j))
                     
 #print(list_)
