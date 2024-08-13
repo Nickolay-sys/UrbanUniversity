@@ -15,8 +15,8 @@ def calculate_structure_sum(structure):
             for i in item:      # перебрать ключи 
                 if isinstance(i, str):
                     counter += len(i)       # и добавить длину каждого к переменной counter если ключ строка
-                if isinstance(i, int):      # и добавить значение ключа если ключ  число 
-                    counter += i
+                if isinstance(i, int):       
+                    counter += i            # и добавить значение ключа если ключ  число
                 if isinstance(i, float):     # если ключ число с плавающей точкой
                     counter += round(i, 2)       # добавить занчение с округлением до 2 чисел после запятой
         if isinstance(item , int):      # если элемент число 
