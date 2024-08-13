@@ -13,8 +13,12 @@ def calculate_structure_sum(structure):
             counter += calculate_structure_sum(item)        # прибавить к переменой counter результат функции с перебираемым параметром
         if isinstance(item, dict):      # условие - если элемент класса словарь то 
             for i in item:      # перебрать ключи 
-                counter += len(i)       # и добавть длину каждого к переменной counter
-            counter += sum(item.values())       # добавить сумму значенний словаря к переменой counter
+                if isinstance(i, str):
+                    counter += len(i)       # и добавить длину каждого к переменной counter если ключ строка
+                if isinstance(i, int):      # и добавить значение ключа если ключ  число 
+                    counter += i
+                if isinstance(i, float):     # если ключ число с плавающей точкой
+                    counter += round(i, 2)       # добавить занчение с округлением до 2 чисел после запятой
         if isinstance(item , int):      # если элемент число 
             counter += item     # добавить к переменой counter
         if isinstance(item, str):       # если элемент строка
