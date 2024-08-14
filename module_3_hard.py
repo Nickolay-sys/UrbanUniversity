@@ -21,8 +21,8 @@ def calculate_structure_sum(structure):
                     counter += round(i, 2)       # добавить занчение с округлением до 2 чисел после запятой
         if isinstance(item , int):      # если элемент число 
             counter += item     # добавить к переменой counter
-        if isinstance(item, float):     # если ключ число с плавающей точкой
-            counter += round(item, 2)
+        if isinstance(item, float):     # если элемент число с плавающей точкой
+            counter += round(item, 2)    # добавить занчение с округлением до 2 чисел после запятой
         if isinstance(item, str):       # если элемент строка
             counter += len(item)        # добавить длину строки к переменой counter
     return counter      # вернуть переменую
