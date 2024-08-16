@@ -19,6 +19,7 @@ def calculate_structure_sum(structure):
                     counter += i            # и добавить значение ключа если ключ  число
                 if isinstance(i, float):     # если ключ число с плавающей точкой
                     counter += round(i, 2)       # добавить занчение с округлением до 2 чисел после запятой
+            counter += sum(item.values())       # добавить сумму значенний словаря к переменой counter
         if isinstance(item , int):      # если элемент число 
             counter += item     # добавить к переменой counter
         if isinstance(item, float):     # если элемент число с плавающей точкой
