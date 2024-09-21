@@ -7,7 +7,7 @@ class Product:
         return f'{self.name}, {self.weight}, {self.category}'
     
 class Shop(Product):
-    def __init__(self, name: str, weight: float, category: str, __file_name = 'products.tx'):
+    def __init__(self, name: str, weight: float, category: str, __file_name = 'products.txt'):
         super().__init__(name, weight, category)
         self.__file_name = __file_name
     def get_products(self):
